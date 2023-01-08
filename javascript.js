@@ -75,6 +75,8 @@ function game(numnberOfRounds) {
             computerWins += 1
         else 
             ties += 1
+
+        console.log(`Current Scores Player: ${playerWins} Computer: ${computerWins}`)
     }
     return `The player won ${playerWins} games. The computer won ${computerWins} games. There was ${ties} ties.`
 }
