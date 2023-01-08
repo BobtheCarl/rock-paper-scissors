@@ -1,3 +1,6 @@
+//Variable
+let winner = null
+
 //Computer Choice
 function getComputerChoice() {
     let computerChoiceValue = Math.floor(Math.random()*3) + 1;
@@ -9,13 +12,13 @@ function getComputerChoice() {
         return "scissors"
 }
 
-//Assigning 
+//Assigning player choice with case insentitvity
 function setPlayerChoice(playerChoice) {
     playerChoice = playerChoice.toLowerCase()
     return playerChoice
 }
-let winner
 
+//Single round of Rock Paper Scissors
 function roundOfRPS(computerChoice, playerChoice) {
     if (playerChoice == "rock" && computerChoice == "scissors") {
         winner = "player"
@@ -57,6 +60,7 @@ function roundOfRPS(computerChoice, playerChoice) {
     }
 }
 
+//Multiple Rounds of Rock Paper Scissors and score keeping
 function game(numnberOfRounds) {
     let playerWins = 0
     let computerWins = 0
@@ -75,4 +79,5 @@ function game(numnberOfRounds) {
     return `The player won ${playerWins} games. The computer won ${computerWins} games. There was ${ties} ties.`
 }
 
+//Output to console
 console.log(game(5))
